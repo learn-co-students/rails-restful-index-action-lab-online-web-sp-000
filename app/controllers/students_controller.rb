@@ -1,6 +1,8 @@
 class StudentsController < ActionController
 
-/students
+    def index
+        @students = Student.all
+      end
 
 
 
