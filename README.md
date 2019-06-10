@@ -1,4 +1,4 @@
-# RESTful Index Action Lab
+rake # RESTful Index Action Lab
 
 ## Objectives
 
