@@ -1,0 +1,6 @@
+<h1>Students</h1>
+
+<% @students.map do |student| %> 
+  <%= "#{student.first_name} " + "#{student.last_name}" %> 
+  <br>
+<% end %> 
