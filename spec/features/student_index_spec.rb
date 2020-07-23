@@ -15,6 +15,6 @@ describe 'Multiple students are shown' do
 
     visit "/students"
 
-    assert_text("Daenerys", "Lindsey")
+    expect(page).to have_content(/(?=.*Daenerys)(?=.*Lindsey).*/)
   end
 end
