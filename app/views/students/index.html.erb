@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<h1>List of Students</h1>
+<% @students.each do |student| %>
+    <ul>
+     <li><%= student.to_s %></li>
+    </ul>
+<% end %>
+</html>
