@@ -1,0 +1,5 @@
+<%= link_to 'Students Record', students_path(@students) %>
+
+<% @students.each do |student| %>
+<%= student.first_name%>
+<% end %>
