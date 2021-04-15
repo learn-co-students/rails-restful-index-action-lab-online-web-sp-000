@@ -148,3 +148,52 @@ Migrating to CreateStudents (1)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Morty"], ["last_name", "Smith"], ["created_at", "2017-11-28 15:01:02.845645"], ["updated_at", "2017-11-28 15:01:02.845645"]]
   [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Started GET "/students" for 127.0.0.1 at 2021-04-14 20:08:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 2849ms (Views: 2835.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2021-04-14 20:15:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/amapi/dev/flatiron/labs/rails-restful-index-action-lab-online-web-sp-000/app/views/students/index.html.erb:3: syntax error, unexpected '|', expecting '}'
+...r.append=( @students.each do {|s| <li>s.to_s</li>} );@output...
+...                              ^
+/mnt/c/Users/amapi/dev/flatiron/labs/rails-restful-index-action-lab-online-web-sp-000/app/views/students/index.html.erb:4: unknown regexp option - l
+/mnt/c/Users/amapi/dev/flatiron/labs/rails-restful-index-action-lab-online-web-sp-000/app/views/students/index.html.erb:4: unmatched close parenthesis: /li>} );@output_buffer.safe_append='
+</
+/mnt/c/Users/amapi/dev/flatiron/labs/rails-restful-index-action-lab-online-web-sp-000/app/views/students/index.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/mnt/c/Users/amapi/dev/flatiron/labs/rails-restful-index-action-lab-online-web-sp-000/app/views/students/index.html.erb:8: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/students/index.html.erb:3: syntax error, unexpected '|', expecting '}'
+app/views/students/index.html.erb:4: unknown regexp option - l
+app/views/students/index.html.erb:4: unmatched close parenthesis: /li>} );@output_buffer.safe_append='
+app/views/students/index.html.erb:8: unterminated string meets end of file
+app/views/students/index.html.erb:8: syntax error, unexpected end-of-input, expecting end
+  Rendering /home/aking/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/aking/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/aking/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /home/aking/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/aking/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/aking/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/aking/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/aking/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.6ms)
+Started GET "/students" for 127.0.0.1 at 2021-04-14 20:16:39 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 209ms (Views: 203.2ms | ActiveRecord: 2.6ms)
+
+
